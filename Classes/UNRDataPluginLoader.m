@@ -1,0 +1,140 @@
+//
+//  PluginLoader.m
+//  UnrealPackageExporter
+//
+//  Created by Adalynn Dudney on 1/8/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+
+#import "UNRDataPluginLoader.h"
+
+#import "UNRControlManager.h"
+#import "UNRObject.h"
+
+@implementation UNRDataPluginLoader
+
+@synthesize plugins = plugins_, addData = addData_, obj = obj_, dataTypes = dataTypes_, dataEndTypes = dataEndTypes_;
+
+- (id)initWithDirectory:(NSString *)path{
+	if(self = [super init]){
+		self.plugins = [NSMutableDictionary dictionary];
+		
+		NSFileManager *manager = [[[NSFileManager alloc] init] autorelease];
+		NSDirectoryEnumerator *enumerator = [manager enumeratorAtPath:path];
+		NSString *filePath;
+		while(filePath = [enumerator nextObject]){
+			if([[filePath pathExtension] isEqualToString:@"xml"]){
+				NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
+				NSXMLParser *parser = [[[NSXMLParser alloc] initWithContentsOfURL:url] autorelease];
+				parser.delegate = self;
+				[parser parse];
+			}
+		}
+		
+		self.addData = NO;
+		self.dataTypes = [NSDictionary dictionaryWithObjectsAndKeys:
+					 @"addByteWithAttributes:",				@"byte",
+					 @"addShortWithAttributes:",			@"short",
+					 @"addIntWithAttributes:",				@"int",
+					 @"addLongWithAttributes:",				@"long",
+					 @"addFloatWithAttributes:",			@"float",
+					 @"addCompactIndexWithAttributes:",		@"compactindex",
+					 @"addPropertiesWithAttributes:",		@"properties",
+					 @"addStringWithAttributes:",			@"string",
+					 @"addDataWithAttributes:",				@"data",
+					 @"addObjectReferenceWithAttributes:",	@"objectreference",
+					 @"beginArrayWithAttributes:",			@"array",
+					 @"beginConditionalWithAttributes:",	@"if",
+					 @"addVectorWithAttributes:",			@"vector",
+					 @"addIntVectorWithAttributes:",		@"intvector",
+					 @"addPlaneWithAttributes:",			@"plane",
+					 @"addBoxWithAttributes:",				@"box",
+					 @"addSphereWithAttributes:",			@"sphere",
+					 @"addRotatorWithAttributes:",			@"rotator",
+					 nil];
+		
+		self.dataEndTypes = [NSDictionary dictionaryWithObjectsAndKeys:
+						@"endArrayWithAttributes:",			@"array",
+						@"endConditionalWithAttributes:",	@"if",
+						nil];
+	}
+	return self;
+}
+
+- (void)loadPlugin:(UNRExport *)object file:(UNRFile *)file{
+	self.addData = NO;
+	
+	self.obj = [[UNRObject alloc] initWithFile:file object:object];
+	
+	NSString *className = object.classObj.name.string;
+	if(className == nil){
+		className = @"Class";
+	}
+	
+	NSXMLParser *parser = [self.plugins valueForKey:[className lowercaseString]];
+	if(parser == nil){
+		parser = [self.plugins valueForKey:@"object"];
+	}
+	parser.delegate = self;
+	[parser parse];
+	
+	int leftOverData = [self.obj.manager.fileData length]-self.obj.manager.curPos;
+	if(leftOverData > 0){
+		[[self.obj.currentData objectAtIndex:0] setValue:[self.obj.manager.fileData subdataWithRange:NSMakeRange(self.obj.manager.curPos, leftOverData)] forKey:@"leftoverData"];
+	}
+	
+	object.objectData = [self.obj.currentData objectAtIndex:0];
+	[self.obj release];
+	self.obj = nil;
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)eName namespaceURI:(NSString *)nURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)aDict{
+	eName = [eName lowercaseString];
+	if([eName isEqualToString:@"plugin"]){
+		NSString *className = [aDict valueForKey:@"class"];
+		if([self.plugins valueForKey:className] == nil){ //if the plugin is not in the dictionary, add it then stop parsing
+			[self.plugins setValue:parser forKey:className];
+			[parser abortParsing];
+		}else{
+			NSString *superClassName = [aDict valueForKey:@"super"];
+			if(superClassName != nil){
+				NSXMLParser *superParser = [self.plugins valueForKey:superClassName];
+				[superParser parse];
+			}
+		}
+	}else if([eName isEqualToString:@"info"]){
+		self.addData = YES;
+	}else if(self.addData){
+		NSString *methodName = [self.dataTypes valueForKey:eName];
+		if(methodName){
+			SEL method = NSSelectorFromString(methodName);
+			[self.obj performSelector:method withObject:aDict];
+		}
+	}
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)eName namespaceURI:(NSString *)nURI qualifiedName:(NSString *)qName{
+	if([eName isEqualToString:@"info"]){
+		self.addData = NO;
+	}else if(self.addData){
+		NSString *methodName = [self.dataEndTypes valueForKey:[eName lowercaseString]];
+		if(methodName){
+			SEL method = NSSelectorFromString(methodName);
+			[self.obj performSelector:method withObject:nil];
+		}
+	}
+}
+
+- (void)dealloc{
+	[plugins_ release];
+	plugins_ = nil;
+	[obj_ release];
+	obj_ = nil;
+	[dataTypes_ release];
+	dataTypes_ = nil;
+	[dataEndTypes_ release];
+	dataEndTypes_ = nil;
+	[super dealloc];
+}
+
+@end
