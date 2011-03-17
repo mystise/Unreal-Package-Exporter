@@ -9,10 +9,4 @@
 	<controls>
 		<textControl label="Text:" input="text" size="large"/>
 	</controls>
-	<!--
-	<import>
-		<text/>
-		<length input="text.length"/>
-	</import>
-	-->
 </plugin>

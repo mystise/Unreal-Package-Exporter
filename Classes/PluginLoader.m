@@ -13,7 +13,7 @@
 
 @implementation PluginLoader
 
-@synthesize controlManager = controlManager_, plugins = plugins_, addControls = addControls_, obj = obj_, controlTypes = controlTypes_;
+@synthesize controlManager = controlManager_, plugins = plugins_, addControls = addControls_, obj = obj_, controlTypes = controlTypes_, url = url_;
 
 - (id)init{
 	if(self = [super init]){
@@ -25,10 +25,12 @@
 		NSString *filePath;
 		while(filePath = [enumerator nextObject]){
 			if([[filePath pathExtension] isEqualToString:@"xml"]){
-				NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
-				NSXMLParser *parser = [[[NSXMLParser alloc] initWithContentsOfURL:url] autorelease];
+				self.url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
+				//NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
+				NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:self.url];
 				parser.delegate = self;
 				[parser parse];
+				[parser release];
 			}
 		}
 		self.addControls = NO;
@@ -52,12 +54,19 @@
 	if(className == nil){
 		className = @"Class";
 	}
-	NSXMLParser *parser = [self.plugins valueForKey:[className lowercaseString]];
-	if(parser == nil){
-		parser = [self.plugins valueForKey:@"object"];
+	
+	//NSXMLParser *parser = [self.plugins valueForKey:[className lowercaseString]];
+	//if(parser == nil){
+	//	parser = [self.plugins valueForKey:@"object"];
+	//}
+	NSURL *url = [self.plugins valueForKey:[className lowercaseString]];
+	if(url == nil){
+		url = [self.plugins valueForKey:@"object"];
 	}
+	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 	parser.delegate = self;
 	[parser parse];
+	[parser release];
 	
 	if([self.obj valueForKeyPath:@"objectData.leftoverData.description"] != nil){
 		[manager addTextControl:self.obj keyPath:@"objectData.leftoverData.description" label:@"Leftover Data:" size:UNRNormal];
@@ -69,13 +78,17 @@
 	if([eName isEqualToString:@"plugin"]){
 		NSString *className = [aDict valueForKey:@"class"];
 		if([self.plugins valueForKey:className] == nil){
-			[self.plugins setValue:parser forKey:className];
-			[parser abortParsing];
+			[self.plugins setValue:self.url forKey:className];
+			//[self.plugins setValue:parser forKey:className];
+			//[parser abortParsing];
 		}else{
 			NSString *superClassName = [aDict valueForKey:@"super"];
 			if(superClassName != nil){
-				NSXMLParser *superParser = [self.plugins valueForKey:superClassName];
+				//NSXMLParser *superParser = [self.plugins valueForKey:superClassName];
+				NSXMLParser *superParser = [[NSXMLParser alloc] initWithContentsOfURL:[self.plugins valueForKey:superClassName]];
+				superParser.delegate = self;
 				[superParser parse];
+				[superParser release];
 			}
 		}
 	}else if([eName isEqualToString:@"controls"]){
@@ -152,6 +165,8 @@
 	obj_ = nil;
 	[controlTypes_ release];
 	controlTypes_ = nil;
+	[url_ release];
+	url_ = nil;
 	[super dealloc];
 }
 

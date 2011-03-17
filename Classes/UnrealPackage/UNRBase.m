@@ -33,8 +33,8 @@
 }
 
 - (void)dealloc{
-	[package_ release];
-	package_ = nil;
+	//[package_ release];
+	//package_ = nil;
 	[name_ release];
 	name_ = nil;
 	[subObjects_ release];

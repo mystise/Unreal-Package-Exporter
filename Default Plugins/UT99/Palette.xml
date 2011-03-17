@@ -15,7 +15,4 @@
 		<numberControl label="Blue:" input="palette.blue" editable="no"/>
 		<numberControl label="Alpha:" input="palette.alpha" editable="no"/>
 	</controls>
-	<import>
-		
-	</import>
 </plugin>

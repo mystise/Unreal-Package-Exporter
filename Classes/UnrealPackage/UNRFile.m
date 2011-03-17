@@ -34,7 +34,9 @@
 
 - (id)initWithFileData:(NSData *)fileData pluginsDirectory:(NSString *)path{
 	if(self = [super init]){
-		self.pluginLoader = [[[UNRDataPluginLoader alloc] initWithDirectory:path] autorelease];
+		id loader = [[UNRDataPluginLoader alloc] initWithDirectory:path];
+		self.pluginLoader = loader;
+		[loader release];
 		
 		self.objects = [NSMutableArray array];
 		self.names = [NSMutableArray array];

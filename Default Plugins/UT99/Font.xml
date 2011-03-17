@@ -2,7 +2,7 @@
 	<info>
 		<byte name="textureCount"/>
 		<array name="textures" count="textureCount">
-			<compactIndex name="textureRef"/> <!-- objectReference -->
+			<objectReference name="textureRef"/>
 			<compactIndex name="charCount"/>
 			<array name="characters" count="charCount">
 				<int name="x"/>
@@ -20,9 +20,5 @@
 		<numberControl label="Char Y:" input="textures.characters.y" editable="no"/>
 		<numberControl label="Char Width:" input="textures.characters.width" editable="no"/>
 		<numberControl label="Char Height:" input="textures.characters.height" editable="no"/>
-		<!--<imageControl label="thing" input="textures.[font].texture"/>-->
 	</controls>
-	<import>
-		<!-- I have no idea... -->
-	</import>
 </plugin>

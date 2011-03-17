@@ -13,7 +13,7 @@
 
 @implementation UNRDataPluginLoader
 
-@synthesize plugins = plugins_, addData = addData_, obj = obj_, dataTypes = dataTypes_, dataEndTypes = dataEndTypes_;
+@synthesize plugins = plugins_, addData = addData_, obj = obj_, dataTypes = dataTypes_, dataEndTypes = dataEndTypes_, url = url_;
 
 - (id)initWithDirectory:(NSString *)path{
 	if(self = [super init]){
@@ -24,10 +24,12 @@
 		NSString *filePath;
 		while(filePath = [enumerator nextObject]){
 			if([[filePath pathExtension] isEqualToString:@"xml"]){
-				NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
-				NSXMLParser *parser = [[[NSXMLParser alloc] initWithContentsOfURL:url] autorelease];
+				self.url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
+				//NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
+				NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:self.url];
 				parser.delegate = self;
 				[parser parse];
+				[parser release];
 			}
 		}
 		
@@ -43,6 +45,7 @@
 					 @"addStringWithAttributes:",			@"string",
 					 @"addDataWithAttributes:",				@"data",
 					 @"addObjectReferenceWithAttributes:",	@"objectreference",
+					 @"addNameReferenceWithAttributes:",	@"namereference",
 					 @"beginArrayWithAttributes:",			@"array",
 					 @"beginConditionalWithAttributes:",	@"if",
 					 @"addVectorWithAttributes:",			@"vector",
@@ -71,12 +74,18 @@
 		className = @"Class";
 	}
 	
-	NSXMLParser *parser = [self.plugins valueForKey:[className lowercaseString]];
-	if(parser == nil){
-		parser = [self.plugins valueForKey:@"object"];
+	//NSXMLParser *parser = [self.plugins valueForKey:[className lowercaseString]];
+	//if(parser == nil){
+	//	parser = [self.plugins valueForKey:@"object"];
+	//}
+	NSURL *url = [self.plugins valueForKey:[className lowercaseString]];
+	if(url == nil){
+		url = [self.plugins valueForKey:@"object"];
 	}
+	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 	parser.delegate = self;
 	[parser parse];
+	[parser release];
 	
 	int leftOverData = [self.obj.manager.fileData length]-self.obj.manager.curPos;
 	if(leftOverData > 0){
@@ -93,13 +102,17 @@
 	if([eName isEqualToString:@"plugin"]){
 		NSString *className = [aDict valueForKey:@"class"];
 		if([self.plugins valueForKey:className] == nil){ //if the plugin is not in the dictionary, add it then stop parsing
-			[self.plugins setValue:parser forKey:className];
-			[parser abortParsing];
+			[self.plugins setValue:self.url forKey:className];
+			//[self.plugins setValue:parser forKey:className];
+			//[parser abortParsing];
 		}else{
 			NSString *superClassName = [aDict valueForKey:@"super"];
 			if(superClassName != nil){
-				NSXMLParser *superParser = [self.plugins valueForKey:superClassName];
+				//NSXMLParser *superParser = [self.plugins valueForKey:superClassName];
+				NSXMLParser *superParser = [[NSXMLParser alloc] initWithContentsOfURL:[self.plugins valueForKey:superClassName]];
+				superParser.delegate = self;
 				[superParser parse];
+				[superParser release];
 			}
 		}
 	}else if([eName isEqualToString:@"info"]){
@@ -134,6 +147,8 @@
 	dataTypes_ = nil;
 	[dataEndTypes_ release];
 	dataEndTypes_ = nil;
+	[url_ release];
+	url_ = nil;
 	[super dealloc];
 }
 

@@ -31,9 +31,10 @@
 }
 
 - (void)loadData:(NSData *)data{
-	NSBundle *bundle = [NSBundle mainBundle];
-	NSString *path = [[bundle resourcePath] stringByAppendingPathComponent:@"Default Plugins"];
-	self.file = [[[UNRFile alloc] initWithFileData:data pluginsDirectory:path] autorelease];
+	NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Default Plugins"];
+	id gak = [[UNRFile alloc] initWithFileData:data pluginsDirectory:path];
+	self.file = gak;
+	[gak release];
 	
 	for(UNRExport *obj in self.file.objects){
 		UNRBase *obj2 = obj.package;

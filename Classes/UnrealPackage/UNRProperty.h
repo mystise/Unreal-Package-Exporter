@@ -26,6 +26,6 @@
 @property(nonatomic, assign) Byte type;
 @property(nonatomic, assign) int index;
 @property(nonatomic, retain) NSData *data;
-@property(nonatomic, retain) UNRFile *file;
+@property(nonatomic, assign) UNRFile *file;
 
 @end

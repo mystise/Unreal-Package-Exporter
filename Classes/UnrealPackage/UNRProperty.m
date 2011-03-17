@@ -212,8 +212,8 @@
 	structName_ = nil;
 	[data_ release];
 	data_ = nil;
-	[file_ release];
-	file_ = nil;
+	//[file_ release];
+	//file_ = nil;
 	[super dealloc];
 }
 

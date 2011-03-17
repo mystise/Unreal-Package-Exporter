@@ -30,6 +30,7 @@
 - (void)addStringWithAttributes:(NSDictionary *)attrib;
 - (void)addDataWithAttributes:(NSDictionary *)attrib;
 - (void)addObjectReferenceWithAttributes:(NSDictionary *)attrib;
+- (void)addNameReferenceWithAttributes:(NSDictionary *)attrib;
 
 - (void)addIntVectorWithAttributes:(NSDictionary *)attrib;
 - (void)addVectorWithAttributes:(NSDictionary *)attrib;

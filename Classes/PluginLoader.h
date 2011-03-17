@@ -30,5 +30,6 @@
 @property(assign) BOOL addControls;
 @property(retain) UNRExport *obj;
 @property(retain) NSDictionary *controlTypes;
+@property(retain) NSURL *url;
 
 @end

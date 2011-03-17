@@ -135,6 +135,16 @@
 	}
 }
 
+- (void)addNameReferenceWithAttributes:(NSDictionary *)attrib{
+	id current = [self.currentData lastObject];
+	[self processArray:@"addNameReferenceWithAttributes:" attribs:attrib];
+	if(![current isKindOfClass:[NSNull class]]){
+		int compact = [UNRFile readCompactIndex:self.manager];
+		UNRName *value = [self.file.names objectAtIndex:compact];
+		[current setValue:value forKey:[attrib valueForKey:@"name"]];
+	}
+}
+
 #pragma mark Special Data Methods
 
 - (void)addIntVectorWithAttributes:(NSDictionary *)attrib{

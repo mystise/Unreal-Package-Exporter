@@ -17,7 +17,7 @@
 - (void)resolveRefrences:(UNRFile *)file;
 - (NSUInteger)subObjectsCount;
 
-@property(nonatomic, retain) UNRBase *package;
+@property(nonatomic, assign) UNRBase *package;//package is the one who owns the subObjects array that this is contained in
 @property(nonatomic, retain) UNRName *name;
 @property(nonatomic, retain) NSMutableArray *subObjects;
 @property(nonatomic, assign) int packageRef, nameRef;

@@ -1,0 +1,6 @@
+<plugin class="skeletalmesh" group="official" game="UT99" super="lodmesh">
+	<info>
+	</info>
+	<controls>
+	</controls>
+</plugin>

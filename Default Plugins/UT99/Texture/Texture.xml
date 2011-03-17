@@ -20,7 +20,4 @@
 		<numberControl label="Height:" input="mipMapLevels.height" editable="no"/>
 		<textControl label="Image Data:" input="mipMapLevels.mipMap.description" size="medium"/>
 	</controls>
-	<import>
-		<!-- take a png and auto mipmap it. (or just set the image to one mipmap.) -->
-	</import>
 </plugin>
