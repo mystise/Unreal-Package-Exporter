@@ -40,7 +40,9 @@
 			<float name="frameRate"/>
 		</array>
 		
-		<int name="connectsJump"/>
+		<if objectValue="file.version" comparator="greater" compareValue="61">
+			<int name="connectsJump"/>
+		</if>
 		<int name="connectCount"/>
 		<array name="connects" count="connectCount">
 			<int name="numVertTriangles"/>
@@ -50,7 +52,9 @@
 		<box name="meshBoundingBox"/>
 		<sphere name="meshBoundingSphere"/>
 		
-		<int name="vertLinksJump"/>
+		<if objectValue="file.version" comparator="greater" compareValue="61">
+			<int name="vertLinkJump"/>
+		</if>
 		<compactIndex name="vertLinkCount"/>
 		<array name="vertLinks" count="vertLinkCount">
 			<int name="vertLink"/>
@@ -58,7 +62,7 @@
 		
 		<compactIndex name="textureCount"/>
 		<array name="textures" count="textureCount">
-			<compactIndex name="texture"/> <!-- objectReference -->
+			<objectReference name="texture"/>
 		</array>
 		
 		<compactIndex name="boundingBoxCount"/>

@@ -12,22 +12,20 @@
 		
 		<compactIndex name="nodeCount"/>
 		<array name="nodes" count="nodeCount">
-			<vector name="plane.N"/>
-			<float name="plane.W"/>
-			<int name="iLeaf.1"/>
-			<int name="iLeaf.2"/>
+			<plane name="plane"/>
+			<long name="zoneMask"/>
+			<byte name="nodeFlags"/>
 			<compactIndex name="iVertPool"/>
 			<compactIndex name="iSurf"/>
 			<compactIndex name="iBack"/>
 			<compactIndex name="iFront"/>
 			<compactIndex name="iPlane"/>
-			<compactIndex name="iCollisionBound"/>
+			<compactIndex name="iCollBound"/>
 			<compactIndex name="iRenderBound"/>
-			<byte name="iZone.1"/>
-			<byte name="iZone.2"/>
-			<byte name="numVerticies"/>
-			<byte name="nodeFlags"/>
-			<long name="zoneMask"/>
+			<short name="iZone"/>
+			<compactIndex name="vertCount"/>
+			<int name="iLeaf1"/>
+			<int name="iLeaf2"/>
 		</array>
 		
 		<compactIndex name="surfCount"/>
@@ -51,10 +49,11 @@
 			<compactIndex name="iSide"/>
 		</array>
 		
-		<compactIndex name="numSharedSides"/>
+		<!--<compactIndex name="numSharedSides"/>
 		<compactIndex name="moverLink"/>
 		<compactIndex name="linked"/>
-		<compactIndex name="rootOutside"/>
+		<compactIndex name="rootOutside"/> -->
+		<int name="unk"/>
 		
 		<int name="zonePropertiesCount"/>
 		<array name="zoneProperties" count="zonePropertiesCount">
@@ -81,9 +80,7 @@
 		
 		<compactIndex name="boundCount"/>
 		<array name="bounds" count="boundCount">
-			<vector name="bound1"/>
-			<vector name="bound2"/>
-			<byte name="boundValid"/>
+			<box name="bound"/>
 		</array>
 		
 		<compactIndex name="leafHullCount"/>
@@ -108,7 +105,7 @@
 		<int name="unk2"/>
 	</info>
 	<controls>
-		<intPopUpControl label="Point Index:" bind="points" from="0" to="pointCount"/>
+		<!-- <intPopUpControl label="Point Index:" bind="points" from="0" to="pointCount"/>
 		<numberControl label="Point.x" input="points.point.x" editable="no"/>
 		<numberControl label="Point.y" input="points.point.y" editable="no"/>
 		<numberControl label="Point.z" input="points.point.z" editable="no"/>
@@ -118,6 +115,17 @@
 		<numberControl label="Vector.z" input="vectors.vector.z" editable="no"/>
 		<intPopUpControl label="Vert Index:" bind="verts" from="0" to="vertCount"/>
 		<numberControl label="Vert.pVertex" input="verts.pVertex" editable="no"/>
-		<numberControl label="Vert.iSide" input="verts.iSide" editable="no"/>
+		<numberControl label="Vert.iSide" input="verts.iSide" editable="no"/> -->
+		<numberControl label="VecCount:" input="vecCount" editable="no"/>
+		<numberControl label="PointCount:" input="pointCount" editable="no"/>
+		<numberControl label="NodeCount:" input="nodeCount" editable="no"/>
+		<numberControl label="SurfCount:" input="surfCount" editable="no"/>
+		<numberControl label="VertCount:" input="vertCount" editable="no"/>
+		<numberControl label="ZonePropCount:" input="zonePropertiesCount" editable="no"/>
+		<numberControl label="LightMapCount:" input="lightMapCount" editable="no"/>
+		<numberControl label="BoundCount:" input="boundCount" editable="no"/>
+		<numberControl label="LeafHullCount:" input="leafHullCount" editable="no"/>
+		<numberControl label="leafCount:" input="leafCount" editable="no"/>
+		<numberControl label="LightCount:" input="lightCount" editable="no"/>
 	</controls>
 </plugin>

@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf290
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10740\viewh8660\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 A plugin is an XML file description of the data contained in the object.\
+\
+The root tag in a plugin file is a plugin tag:\
+\
+<plugin class="[class]" superclass="[super]" group="[group]" game="[game]">\
+</plugin>\
+\
+Class:\
+the class of object the plugin is loaded for.\
+Valid values:\
+Any valid UnrealScript class name. (has to be all lowercase, or it will fail to parse)\
+\
+Super (optional):\
+the super class of the object (loads the superclass plugin first).\
+Valid values:\
+Any valid UnrealScript class name. (has to be all lowercase, or it will fail to parse)\
+\
+Group:\
+the group the plugin is contained in (eg. "dave's cool plugin pack")\
+Valid values:\
+Any string.\
+\
+Game:\
+the game that the plugin is loaded for (eg. "Unreal Tournament")\
+Valid values:\
+Unreal\
+UT99\
+UT2003\
+UT2004\
+UT3\
+(or any combination of them, separated by commas.)\
+\
+A plugin can contain:\
+}

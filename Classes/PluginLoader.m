@@ -13,17 +13,18 @@
 
 @implementation PluginLoader
 
-@synthesize controlManager = controlManager_, plugins = plugins_, addControls = addControls_, obj = obj_, controlTypes = controlTypes_, url = url_;
+@synthesize controlManager = controlManager_, plugins = plugins_, addControls = addControls_, obj = obj_, controlTypes = controlTypes_, url = url_, classTrace = classTrace_;
 
 - (id)init{
-	if(self = [super init]){
+	if((self = [super init])){
+		self.classTrace = [NSMutableArray array];
 		self.plugins = [NSMutableDictionary dictionary];
 		NSFileManager *manager = [[[NSFileManager alloc] init] autorelease];
 		NSBundle *bundle = [NSBundle mainBundle];
 		NSString *path = [[bundle resourcePath] stringByAppendingPathComponent:@"Default Plugins"];
 		NSDirectoryEnumerator *enumerator = [manager enumeratorAtPath:path];
 		NSString *filePath;
-		while(filePath = [enumerator nextObject]){
+		while((filePath = [enumerator nextObject])){
 			if([[filePath pathExtension] isEqualToString:@"xml"]){
 				self.url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
 				//NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
@@ -54,6 +55,7 @@
 	if(className == nil){
 		className = @"Class";
 	}
+	[self.classTrace addObject:[className lowercaseString]];
 	
 	//NSXMLParser *parser = [self.plugins valueForKey:[className lowercaseString]];
 	//if(parser == nil){
@@ -85,6 +87,7 @@
 			NSString *superClassName = [aDict valueForKey:@"super"];
 			if(superClassName != nil){
 				//NSXMLParser *superParser = [self.plugins valueForKey:superClassName];
+				[self.classTrace addObject:[superClassName lowercaseString]];
 				NSXMLParser *superParser = [[NSXMLParser alloc] initWithContentsOfURL:[self.plugins valueForKey:superClassName]];
 				superParser.delegate = self;
 				[superParser parse];
@@ -157,6 +160,8 @@
 }
 
 - (void)dealloc{
+	[classTrace_ release];
+	classTrace_ = nil;
 	[controlManager_ release];
 	controlManager_ = nil;
 	[plugins_ release];

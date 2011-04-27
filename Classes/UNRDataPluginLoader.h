@@ -6,11 +6,11 @@
 //  Copyright 2011 ADCorporation. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 #import "Unreal.h"
 #import "DataManager.h"
-@class UNRControlManager, UNRObject;
+@class UNRObject;
 
 @interface UNRDataPluginLoader : NSObject <NSXMLParserDelegate> {
 	

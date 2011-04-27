@@ -8,17 +8,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Unreal.h"
+#import <UnrealToolsFramework/Unreal.h>
 @class DocModel, TabViewController;
 
-@interface OutlineViewController : NSObject<NSOutlineViewDataSource, NSOutlineViewDelegate> {
+@interface OutlineViewController : NSObject<NSOutlineViewDataSource, NSOutlineViewDelegate, NSWindowDelegate> {
 	
 }
 
-- (void)exportToFile;
+- (void)rawExport;
+- (void)dataExport;
 
-@property(assign) IBOutlet TabViewController *control;
+- (void)cleanUp;
+
 @property(retain) UNRExport *selected;
+@property(assign) IBOutlet TabViewController *control;
 @property(assign) IBOutlet NSWindow *window;
 @property(assign) IBOutlet DocModel *doc;
 

@@ -99,7 +99,7 @@
 	return YES;
 }
 
-- (void)exportToFile{
+- (void)rawExport{
 	if(self.selected != nil){
 		NSSavePanel *save = [[NSSavePanel alloc]init];
 		[save setCanCreateDirectories:YES];
@@ -112,21 +112,39 @@
 		}
 		[save setAllowedFileTypes:[NSArray arrayWithObject:fileExtension]];
 		[save setExtensionHidden:NO];
-		[save beginSheetForDirectory:NSHomeDirectory()
-								file:self.selected.name.string
-					  modalForWindow:self.window
-					   modalDelegate:self
-					  didEndSelector:@selector(didEndSaveSheet:returnCode:conextInfo:)
-						 contextInfo:nil];
+		[save beginSheetModalForWindow:self.window completionHandler:^ (NSInteger result){
+			if(result == NSOKButton){
+				[self.selected.data writeToURL:[save URL] atomically:YES];
+			}
+		}];
 	}
 }
 
-- (void)didEndSaveSheet:(NSSavePanel *)savePanel returnCode:(int)returnCode conextInfo:(void *)contextInfo{
-	if(returnCode == NSOKButton){
-		[self.selected.data writeToURL:[savePanel URL] atomically:YES];
-	}else{
-		
+- (void)dataExport{
+	if(self.selected != nil){
+		NSSavePanel *save = [[NSSavePanel alloc]init];
+		[save setCanCreateDirectories:YES];
+		UNRBase *obj = self.selected.classObj;
+		NSString *fileExtension;
+		if(obj != nil){
+			fileExtension = obj.name.string;
+		}else{
+			fileExtension = @"unrData";
+		}
+		[save setAllowedFileTypes:[NSArray arrayWithObject:fileExtension]];
+		[save setExtensionHidden:NO];
+		[save beginSheetModalForWindow:self.window completionHandler:^ (NSInteger result){
+			if(result == NSOKButton){
+				//loop through each plugin and ask it if it works
+				//self.control.loader.classTrace
+				//when you find one, call the method
+			}
+		}];
 	}
+}
+
+- (void)cleanUp{
+	[control_ updateTabView:nil];
 }
 
 - (void)dealloc{

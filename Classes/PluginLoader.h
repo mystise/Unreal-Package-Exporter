@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Unreal.h"
-#import "DataManager.h"
+#import <UnrealToolsFramework/Unreal.h>
+#import <UnrealToolsFramework/DataManager.h>
 @class UNRControlManager, UNRObject;
 
 @interface PluginLoader : NSObject <NSXMLParserDelegate> {
@@ -31,5 +31,6 @@
 @property(retain) UNRExport *obj;
 @property(retain) NSDictionary *controlTypes;
 @property(retain) NSURL *url;
+@property(retain) NSMutableArray *classTrace;
 
 @end

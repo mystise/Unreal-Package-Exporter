@@ -11,11 +11,12 @@
 
 #import "DocModel.h"
 
-@interface MyDocument : NSDocument{
+@interface MyDocument : NSDocument {
 	
 }
 
-- (IBAction)exportObject:(id)sender;
+- (IBAction)exportRaw:(id)sender;
+- (IBAction)exportData:(id)sender;
 
 @property(retain) IBOutlet DocModel *model;
 @property(retain) NSData *data;

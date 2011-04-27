@@ -11,4 +11,6 @@
 #import "UNRName.h"
 #import "UNRExport.h"
 #import "UNRImport.h"
+#import "UNRBase.h"
 #import "UNRGuid.h"
+#import "UNRGeneration.h"

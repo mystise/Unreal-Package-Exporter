@@ -52,8 +52,16 @@
 	return YES;
 }
 
-- (IBAction)exportObject:(id)sender{
-	[self.model exportObject:sender];
+- (IBAction)exportRaw:(id)sender{
+	[self.model exportRaw:sender];
+}
+
+- (IBAction)exportData:(id)sender{
+	[self.model exportData:sender];
+}
+
+- (void)windowWillClose:(NSWindow *)window{
+	[self.model cleanUp];
 }
 
 - (void)dealloc{

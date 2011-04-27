@@ -60,8 +60,16 @@
 	[self.objView reloadData];
 }
 
-- (void)exportObject:(id)sender{
-	[self.objViewController exportToFile];
+- (void)exportRaw:(id)sender{
+	[self.objViewController rawExport];
+}
+
+- (void)exportData:(id)sender{
+	[self.objViewController dataExport];
+}
+
+- (void)cleanUp{
+	[self.objViewController cleanUp];
 }
 
 - (void)dealloc{

@@ -9,32 +9,78 @@
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		4908A2CE13623F88006284C4 /* UnrealToolsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49625040135409D500768E43 /* UnrealToolsFramework.framework */; };
 		491F2D7B12EBC5310068E0E1 /* UNRControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F2D7A12EBC5310068E0E1 /* UNRControlView.m */; };
-		494DE62113220AD300227057 /* UNRGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DE62013220AD300227057 /* UNRGeneration.m */; };
-		494DE676132218EA00227057 /* UNRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DE675132218EA00227057 /* UNRUtilities.m */; };
-		4980D76612079ED3009CE250 /* UNRBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980D76512079ED3009CE250 /* UNRBase.m */; };
+		49624FA41352AC9200768E43 /* UNRDataPluginLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 498B1598131F14320040168B /* UNRDataPluginLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FA51352AC9200768E43 /* UNRObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 49FE462D12DC2AB000E02EB7 /* UNRObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FA61352AC9200768E43 /* UNRProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 49FE478212DD722E00E02EB7 /* UNRProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FA71352AC9200768E43 /* UNRFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D3F012011FFA00E19E44 /* UNRFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FA81352AC9200768E43 /* UNRName.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D463120142C100E19E44 /* UNRName.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FA91352AC9200768E43 /* UNRImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D466120142D300E19E44 /* UNRImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FAA1352AC9200768E43 /* UNRExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D48C1201449D00E19E44 /* UNRExport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FAB1352AC9200768E43 /* UNRBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4980D76412079ED3009CE250 /* UNRBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FAC1352AC9200768E43 /* UNRGuid.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F2647F12D191760005B1F5 /* UNRGuid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FAD1352AC9200768E43 /* UNRGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 494DE61F13220AD300227057 /* UNRGeneration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FAE1352AC9200768E43 /* UNRUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 494DE66E1322186600227057 /* UNRUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FAF1352AC9200768E43 /* Unreal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D4AB1201467D00E19E44 /* Unreal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FB01352AC9200768E43 /* DataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D23E11FFE5FA00E19E44 /* DataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49624FB11352ACB300768E43 /* UNRDataPluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B1599131F14320040168B /* UNRDataPluginLoader.m */; };
+		49624FB21352ACB300768E43 /* UNRObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE462E12DC2AB000E02EB7 /* UNRObject.m */; };
+		49624FB31352ACB300768E43 /* UNRProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE478312DD722E00E02EB7 /* UNRProperty.m */; };
+		49624FB41352ACB300768E43 /* UNRFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D3F112011FFA00E19E44 /* UNRFile.m */; };
+		49624FB51352ACB300768E43 /* UNRName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D464120142C100E19E44 /* UNRName.m */; };
+		49624FB61352ACB300768E43 /* UNRImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D467120142D300E19E44 /* UNRImport.m */; };
+		49624FB71352ACB300768E43 /* UNRExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D48D1201449D00E19E44 /* UNRExport.m */; };
+		49624FB81352ACB300768E43 /* UNRBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980D76512079ED3009CE250 /* UNRBase.m */; };
+		49624FB91352ACB300768E43 /* UNRGuid.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2648012D191760005B1F5 /* UNRGuid.m */; };
+		49624FBA1352ACB300768E43 /* UNRGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DE62013220AD300227057 /* UNRGeneration.m */; };
+		49624FBB1352ACB300768E43 /* UNRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DE675132218EA00227057 /* UNRUtilities.m */; };
+		49624FBC1352ACB300768E43 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D23F11FFE5FA00E19E44 /* DataManager.m */; };
+		49624FE91352B30300768E43 /* UNRDataExportPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A62559134162DB00C28F4F /* UNRDataExportPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625055135409EC00768E43 /* UNRDataPluginLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 498B1598131F14320040168B /* UNRDataPluginLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625056135409EC00768E43 /* UNRObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 49FE462D12DC2AB000E02EB7 /* UNRObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625057135409EC00768E43 /* UNRProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 49FE478212DD722E00E02EB7 /* UNRProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625058135409EC00768E43 /* UNRFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D3F012011FFA00E19E44 /* UNRFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625059135409EC00768E43 /* UNRName.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D463120142C100E19E44 /* UNRName.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4962505A135409EC00768E43 /* UNRImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D466120142D300E19E44 /* UNRImport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4962505B135409EC00768E43 /* UNRExport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D48C1201449D00E19E44 /* UNRExport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4962505C135409EC00768E43 /* UNRBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4980D76412079ED3009CE250 /* UNRBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4962505D135409EC00768E43 /* UNRGuid.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F2647F12D191760005B1F5 /* UNRGuid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4962505E135409EC00768E43 /* UNRGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 494DE61F13220AD300227057 /* UNRGeneration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4962505F135409EC00768E43 /* UNRUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 494DE66E1322186600227057 /* UNRUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625060135409EC00768E43 /* Unreal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D4AB1201467D00E19E44 /* Unreal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625061135409EC00768E43 /* DataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995D23E11FFE5FA00E19E44 /* DataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49625062135409F500768E43 /* UNRDataPluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B1599131F14320040168B /* UNRDataPluginLoader.m */; };
+		49625063135409F500768E43 /* UNRObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE462E12DC2AB000E02EB7 /* UNRObject.m */; };
+		49625064135409F500768E43 /* UNRProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE478312DD722E00E02EB7 /* UNRProperty.m */; };
+		49625065135409F500768E43 /* UNRFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D3F112011FFA00E19E44 /* UNRFile.m */; };
+		49625066135409F500768E43 /* UNRName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D464120142C100E19E44 /* UNRName.m */; };
+		49625067135409F500768E43 /* UNRImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D467120142D300E19E44 /* UNRImport.m */; };
+		49625068135409F500768E43 /* UNRExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D48D1201449D00E19E44 /* UNRExport.m */; };
+		49625069135409F500768E43 /* UNRBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980D76512079ED3009CE250 /* UNRBase.m */; };
+		4962506A135409F500768E43 /* UNRGuid.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2648012D191760005B1F5 /* UNRGuid.m */; };
+		4962506B135409F500768E43 /* UNRGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DE62013220AD300227057 /* UNRGeneration.m */; };
+		4962506C135409F500768E43 /* UNRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DE675132218EA00227057 /* UNRUtilities.m */; };
+		4962506D135409F500768E43 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D23F11FFE5FA00E19E44 /* DataManager.m */; };
+		496250EE13540A0800768E43 /* UNRDataExportPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A62559134162DB00C28F4F /* UNRDataExportPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		496250FC13540A4200768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
+		496250FD13540A4700768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
+		496250FE13540A4C00768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
+		4962510013540A5800768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
 		498582B6132AF77100143F5A /* DocModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 498582B5132AF77100143F5A /* DocModel.m */; };
 		498B148D131CC0F10040168B /* UNRSoundControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B148C131CC0F10040168B /* UNRSoundControl.m */; };
-		498B156B131CC81C0040168B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498B156A131CC81C0040168B /* QTKit.framework */; };
-		498B159A131F14320040168B /* UNRDataPluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B1599131F14320040168B /* UNRDataPluginLoader.m */; };
 		4995D24011FFE5FA00E19E44 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D23F11FFE5FA00E19E44 /* DataManager.m */; };
-		4995D3F212011FFA00E19E44 /* UNRFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D3F112011FFA00E19E44 /* UNRFile.m */; };
-		4995D465120142C100E19E44 /* UNRName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D464120142C100E19E44 /* UNRName.m */; };
-		4995D468120142D300E19E44 /* UNRImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D467120142D300E19E44 /* UNRImport.m */; };
-		4995D48E1201449D00E19E44 /* UNRExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D48D1201449D00E19E44 /* UNRExport.m */; };
 		4995D59A12023D3500E19E44 /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D59912023D3500E19E44 /* OutlineViewController.m */; };
+		49EDD8A41367C81800D27252 /* UnrealPackageExporter.icns in Resources */ = {isa = PBXBuildFile; fileRef = 49EDD8A31367C81800D27252 /* UnrealPackageExporter.icns */; };
 		49F260BC12CAE8C40005B1F5 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F260BB12CAE8C40005B1F5 /* TabViewController.m */; };
 		49F2628012CD5A210005B1F5 /* UNRControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2627F12CD5A210005B1F5 /* UNRControl.m */; };
 		49F262A912CD8CB40005B1F5 /* UNRControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F262A812CD8CB40005B1F5 /* UNRControlManager.m */; };
 		49F262B612CD91280005B1F5 /* UNRStringControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F262B512CD91280005B1F5 /* UNRStringControl.m */; };
 		49F262B912CD912F0005B1F5 /* UNRNumberControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F262B812CD912F0005B1F5 /* UNRNumberControl.m */; };
 		49F263B712CE85400005B1F5 /* UNRTextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F263B612CE85400005B1F5 /* UNRTextControl.m */; };
-		49F2648112D191760005B1F5 /* UNRGuid.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2648012D191760005B1F5 /* UNRGuid.m */; };
 		49FE457F12D9399500E02EB7 /* PluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE457E12D9399500E02EB7 /* PluginLoader.m */; };
 		49FE458312DAC46F00E02EB7 /* UNRIntPopUpControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE458212DAC46F00E02EB7 /* UNRIntPopUpControl.m */; };
 		49FE45F612DACAB500E02EB7 /* Default Plugins in Resources */ = {isa = PBXBuildFile; fileRef = 49FE45EF12DACAB500E02EB7 /* Default Plugins */; };
-		49FE462F12DC2AB000E02EB7 /* UNRObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE462E12DC2AB000E02EB7 /* UNRObject.m */; };
-		49FE478412DD722E00E02EB7 /* UNRProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE478312DD722E00E02EB7 /* UNRProperty.m */; };
 		49FE485112DE8ADC00E02EB7 /* UNRListControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE485012DE8ADC00E02EB7 /* UNRListControl.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
@@ -42,6 +88,16 @@
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4908A2CC13623F83006284C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4962503F135409D500768E43;
+			remoteInfo = UnrealToolsFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -61,17 +117,22 @@
 		494DE62013220AD300227057 /* UNRGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRGeneration.m; sourceTree = "<group>"; };
 		494DE66E1322186600227057 /* UNRUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRUtilities.h; sourceTree = "<group>"; };
 		494DE675132218EA00227057 /* UNRUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRUtilities.m; sourceTree = "<group>"; };
+		49624FA11352AC7D00768E43 /* libUnrealTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUnrealTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		49624FE51352B2F200768E43 /* libUNRDataExporter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUNRDataExporter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		49625040135409D500768E43 /* UnrealToolsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnrealToolsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49625041135409D500768E43 /* UnrealToolsFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnrealToolsFramework-Info.plist"; sourceTree = "<group>"; };
+		4962504D135409E100768E43 /* UNRDataExporterFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UNRDataExporterFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4962504E135409E100768E43 /* UNRDataExporterFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UNRDataExporterFramework-Info.plist"; sourceTree = "<group>"; };
 		4980D76412079ED3009CE250 /* UNRBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRBase.h; sourceTree = "<group>"; };
 		4980D76512079ED3009CE250 /* UNRBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRBase.m; sourceTree = "<group>"; };
 		498582B4132AF77100143F5A /* DocModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocModel.h; sourceTree = "<group>"; };
 		498582B5132AF77100143F5A /* DocModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocModel.m; sourceTree = "<group>"; };
 		498B148B131CC0F10040168B /* UNRSoundControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRSoundControl.h; sourceTree = "<group>"; };
 		498B148C131CC0F10040168B /* UNRSoundControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRSoundControl.m; sourceTree = "<group>"; };
-		498B156A131CC81C0040168B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		498B1598131F14320040168B /* UNRDataPluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNRDataPluginLoader.h; path = Classes/UNRDataPluginLoader.h; sourceTree = SOURCE_ROOT; };
 		498B1599131F14320040168B /* UNRDataPluginLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UNRDataPluginLoader.m; path = Classes/UNRDataPluginLoader.m; sourceTree = SOURCE_ROOT; };
-		4995D23E11FFE5FA00E19E44 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		4995D23F11FFE5FA00E19E44 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		4995D23E11FFE5FA00E19E44 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = ../DataManager.h; sourceTree = "<group>"; };
+		4995D23F11FFE5FA00E19E44 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = ../DataManager.m; sourceTree = "<group>"; };
 		4995D3F012011FFA00E19E44 /* UNRFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRFile.h; sourceTree = "<group>"; };
 		4995D3F112011FFA00E19E44 /* UNRFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRFile.m; sourceTree = "<group>"; };
 		4995D463120142C100E19E44 /* UNRName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRName.h; sourceTree = "<group>"; };
@@ -83,6 +144,8 @@
 		4995D4AB1201467D00E19E44 /* Unreal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unreal.h; sourceTree = "<group>"; };
 		4995D59812023D3500E19E44 /* OutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewController.h; sourceTree = "<group>"; };
 		4995D59912023D3500E19E44 /* OutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewController.m; sourceTree = "<group>"; };
+		49A62559134162DB00C28F4F /* UNRDataExportPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNRDataExportPlugin.h; path = Classes/UNRDataExportPlugin.h; sourceTree = "<group>"; };
+		49EDD8A31367C81800D27252 /* UnrealPackageExporter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = UnrealPackageExporter.icns; sourceTree = "<group>"; };
 		49F260BA12CAE8C40005B1F5 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
 		49F260BB12CAE8C40005B1F5 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		49F2627E12CD5A210005B1F5 /* UNRControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRControl.h; sourceTree = "<group>"; };
@@ -113,12 +176,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		49624F9F1352AC7D00768E43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496250FD13540A4700768E43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49624FE31352B2F200768E43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496250FC13540A4200768E43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4962503E135409D500768E43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496250FE13540A4C00768E43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4962504B135409E000768E43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4962510013540A5800768E43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC330486D014006FF6A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
-				498B156B131CC81C0040168B /* QTKit.framework in Frameworks */,
+				4908A2CE13623F88006284C4 /* UnrealToolsFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +233,6 @@
 			children = (
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
-				498B156A131CC81C0040168B /* QTKit.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -147,6 +241,10 @@
 			isa = PBXGroup;
 			children = (
 				8D15AC370486D014006FF6A4 /* UnrealPackageExporter.app */,
+				49624FA11352AC7D00768E43 /* libUnrealTools.a */,
+				49624FE51352B2F200768E43 /* libUNRDataExporter.a */,
+				49625040135409D500768E43 /* UnrealToolsFramework.framework */,
+				4962504D135409E100768E43 /* UNRDataExporterFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,20 +252,21 @@
 		2A37F4AAFDCFA73011CA2CEA /* UnrealPackageExporter */ = {
 			isa = PBXGroup;
 			children = (
-				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				49EDD8A31367C81800D27252 /* UnrealPackageExporter.icns */,
+				49A625761341644D00C28F4F /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
+				49625041135409D500768E43 /* UnrealToolsFramework-Info.plist */,
+				4962504E135409E100768E43 /* UNRDataExporterFramework-Info.plist */,
 			);
 			name = UnrealPackageExporter;
 			sourceTree = "<group>";
 		};
-		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+		2A37F4ABFDCFA73011CA2CEA /* UNRPackageExporter */ = {
 			isa = PBXGroup;
 			children = (
-				4995D4A4120145A000E19E44 /* UnrealPackage */,
-				49F262B112CD8FD00005B1F5 /* UNRControls */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
 				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
 				498582B4132AF77100143F5A /* DocModel.h */,
@@ -178,9 +277,8 @@
 				49F260BB12CAE8C40005B1F5 /* TabViewController.m */,
 				49FE457D12D9399500E02EB7 /* PluginLoader.h */,
 				49FE457E12D9399500E02EB7 /* PluginLoader.m */,
-				4995D23E11FFE5FA00E19E44 /* DataManager.h */,
-				4995D23F11FFE5FA00E19E44 /* DataManager.m */,
 			);
+			name = UNRPackageExporter;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -233,14 +331,36 @@
 				49F2648012D191760005B1F5 /* UNRGuid.m */,
 				494DE61F13220AD300227057 /* UNRGeneration.h */,
 				494DE62013220AD300227057 /* UNRGeneration.m */,
-				4995D4AB1201467D00E19E44 /* Unreal.h */,
 				494DE66E1322186600227057 /* UNRUtilities.h */,
 				494DE675132218EA00227057 /* UNRUtilities.m */,
+				4995D4AB1201467D00E19E44 /* Unreal.h */,
+				4995D23E11FFE5FA00E19E44 /* DataManager.h */,
+				4995D23F11FFE5FA00E19E44 /* DataManager.m */,
 			);
-			path = UnrealPackage;
+			name = UnrealPackage;
+			path = Classes/UnrealPackage;
 			sourceTree = "<group>";
 		};
-		49F262B112CD8FD00005B1F5 /* UNRControls */ = {
+		49A625761341644D00C28F4F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49A625771341645700C28F4F /* UNRDataExporter */,
+				4995D4A4120145A000E19E44 /* UnrealPackage */,
+				49F262B112CD8FD00005B1F5 /* UNRControl */,
+				2A37F4ABFDCFA73011CA2CEA /* UNRPackageExporter */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		49A625771341645700C28F4F /* UNRDataExporter */ = {
+			isa = PBXGroup;
+			children = (
+				49A62559134162DB00C28F4F /* UNRDataExportPlugin.h */,
+			);
+			name = UNRDataExporter;
+			sourceTree = "<group>";
+		};
+		49F262B112CD8FD00005B1F5 /* UNRControl */ = {
 			isa = PBXGroup;
 			children = (
 				49F2627E12CD5A210005B1F5 /* UNRControl.h */,
@@ -262,7 +382,8 @@
 				491F2D7912EBC5310068E0E1 /* UNRControlView.h */,
 				491F2D7A12EBC5310068E0E1 /* UNRControlView.m */,
 			);
-			path = UNRControls;
+			name = UNRControl;
+			path = Classes/UNRControls;
 			sourceTree = "<group>";
 		};
 		49FE462C12DC2AA000E02EB7 /* UNRPluginObject */ = {
@@ -280,7 +401,136 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		49624F9D1352AC7D00768E43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49624FA41352AC9200768E43 /* UNRDataPluginLoader.h in Headers */,
+				49624FA51352AC9200768E43 /* UNRObject.h in Headers */,
+				49624FA61352AC9200768E43 /* UNRProperty.h in Headers */,
+				49624FA71352AC9200768E43 /* UNRFile.h in Headers */,
+				49624FA81352AC9200768E43 /* UNRName.h in Headers */,
+				49624FA91352AC9200768E43 /* UNRImport.h in Headers */,
+				49624FAA1352AC9200768E43 /* UNRExport.h in Headers */,
+				49624FAB1352AC9200768E43 /* UNRBase.h in Headers */,
+				49624FAC1352AC9200768E43 /* UNRGuid.h in Headers */,
+				49624FAD1352AC9200768E43 /* UNRGeneration.h in Headers */,
+				49624FAE1352AC9200768E43 /* UNRUtilities.h in Headers */,
+				49624FAF1352AC9200768E43 /* Unreal.h in Headers */,
+				49624FB01352AC9200768E43 /* DataManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49624FE11352B2F200768E43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49624FE91352B30300768E43 /* UNRDataExportPlugin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4962503B135409D500768E43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49625055135409EC00768E43 /* UNRDataPluginLoader.h in Headers */,
+				49625056135409EC00768E43 /* UNRObject.h in Headers */,
+				49625057135409EC00768E43 /* UNRProperty.h in Headers */,
+				49625058135409EC00768E43 /* UNRFile.h in Headers */,
+				49625059135409EC00768E43 /* UNRName.h in Headers */,
+				4962505A135409EC00768E43 /* UNRImport.h in Headers */,
+				4962505B135409EC00768E43 /* UNRExport.h in Headers */,
+				4962505C135409EC00768E43 /* UNRBase.h in Headers */,
+				4962505D135409EC00768E43 /* UNRGuid.h in Headers */,
+				4962505E135409EC00768E43 /* UNRGeneration.h in Headers */,
+				4962505F135409EC00768E43 /* UNRUtilities.h in Headers */,
+				49625060135409EC00768E43 /* Unreal.h in Headers */,
+				49625061135409EC00768E43 /* DataManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49625048135409E000768E43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496250EE13540A0800768E43 /* UNRDataExportPlugin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		49624FA01352AC7D00768E43 /* UnrealTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49624FC11352ACC200768E43 /* Build configuration list for PBXNativeTarget "UnrealTools" */;
+			buildPhases = (
+				49624F9D1352AC7D00768E43 /* Headers */,
+				49624F9E1352AC7D00768E43 /* Sources */,
+				49624F9F1352AC7D00768E43 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnrealTools;
+			productName = UnrealTools;
+			productReference = 49624FA11352AC7D00768E43 /* libUnrealTools.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		49624FE41352B2F200768E43 /* UNRDataExporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49624FEC1352B32400768E43 /* Build configuration list for PBXNativeTarget "UNRDataExporter" */;
+			buildPhases = (
+				49624FE11352B2F200768E43 /* Headers */,
+				49624FE21352B2F200768E43 /* Sources */,
+				49624FE31352B2F200768E43 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UNRDataExporter;
+			productName = UNRDataExporter;
+			productReference = 49624FE51352B2F200768E43 /* libUNRDataExporter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4962503F135409D500768E43 /* UnrealToolsFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49625047135409D600768E43 /* Build configuration list for PBXNativeTarget "UnrealToolsFramework" */;
+			buildPhases = (
+				4962503B135409D500768E43 /* Headers */,
+				4962503C135409D500768E43 /* Resources */,
+				4962503D135409D500768E43 /* Sources */,
+				4962503E135409D500768E43 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnrealToolsFramework;
+			productName = UnrealToolsFramework;
+			productReference = 49625040135409D500768E43 /* UnrealToolsFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4962504C135409E000768E43 /* UNRDataExporterFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49625054135409E100768E43 /* Build configuration list for PBXNativeTarget "UNRDataExporterFramework" */;
+			buildPhases = (
+				49625048135409E000768E43 /* Headers */,
+				49625049135409E000768E43 /* Resources */,
+				4962504A135409E000768E43 /* Sources */,
+				4962504B135409E000768E43 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UNRDataExporterFramework;
+			productName = UNRDataExporterFramework;
+			productReference = 4962504D135409E100768E43 /* UNRDataExporterFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		8D15AC270486D014006FF6A4 /* UnrealPackageExporter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "UnrealPackageExporter" */;
@@ -292,6 +542,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4908A2CD13623F83006284C4 /* PBXTargetDependency */,
 			);
 			name = UnrealPackageExporter;
 			productInstallPath = "$(HOME)/Applications";
@@ -306,17 +557,42 @@
 			isa = PBXProject;
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "UnrealPackageExporter" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* UnrealPackageExporter */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* UnrealPackageExporter */,
+				49624FA01352AC7D00768E43 /* UnrealTools */,
+				49624FE41352B2F200768E43 /* UNRDataExporter */,
+				4962503F135409D500768E43 /* UnrealToolsFramework */,
+				4962504C135409E000768E43 /* UNRDataExporterFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4962503C135409D500768E43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49625049135409E000768E43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,12 +602,65 @@
 				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
 				49FE45F612DACAB500E02EB7 /* Default Plugins in Resources */,
+				49EDD8A41367C81800D27252 /* UnrealPackageExporter.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		49624F9E1352AC7D00768E43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49624FB11352ACB300768E43 /* UNRDataPluginLoader.m in Sources */,
+				49624FB21352ACB300768E43 /* UNRObject.m in Sources */,
+				49624FB31352ACB300768E43 /* UNRProperty.m in Sources */,
+				49624FB41352ACB300768E43 /* UNRFile.m in Sources */,
+				49624FB51352ACB300768E43 /* UNRName.m in Sources */,
+				49624FB61352ACB300768E43 /* UNRImport.m in Sources */,
+				49624FB71352ACB300768E43 /* UNRExport.m in Sources */,
+				49624FB81352ACB300768E43 /* UNRBase.m in Sources */,
+				49624FB91352ACB300768E43 /* UNRGuid.m in Sources */,
+				49624FBA1352ACB300768E43 /* UNRGeneration.m in Sources */,
+				49624FBB1352ACB300768E43 /* UNRUtilities.m in Sources */,
+				49624FBC1352ACB300768E43 /* DataManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49624FE21352B2F200768E43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4962503D135409D500768E43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49625062135409F500768E43 /* UNRDataPluginLoader.m in Sources */,
+				49625063135409F500768E43 /* UNRObject.m in Sources */,
+				49625064135409F500768E43 /* UNRProperty.m in Sources */,
+				49625065135409F500768E43 /* UNRFile.m in Sources */,
+				49625066135409F500768E43 /* UNRName.m in Sources */,
+				49625067135409F500768E43 /* UNRImport.m in Sources */,
+				49625068135409F500768E43 /* UNRExport.m in Sources */,
+				49625069135409F500768E43 /* UNRBase.m in Sources */,
+				4962506A135409F500768E43 /* UNRGuid.m in Sources */,
+				4962506B135409F500768E43 /* UNRGeneration.m in Sources */,
+				4962506C135409F500768E43 /* UNRUtilities.m in Sources */,
+				4962506D135409F500768E43 /* DataManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4962504A135409E000768E43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC300486D014006FF6A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,34 +668,31 @@
 				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				4995D24011FFE5FA00E19E44 /* DataManager.m in Sources */,
-				4995D3F212011FFA00E19E44 /* UNRFile.m in Sources */,
-				4995D465120142C100E19E44 /* UNRName.m in Sources */,
-				4995D468120142D300E19E44 /* UNRImport.m in Sources */,
-				4995D48E1201449D00E19E44 /* UNRExport.m in Sources */,
 				4995D59A12023D3500E19E44 /* OutlineViewController.m in Sources */,
-				4980D76612079ED3009CE250 /* UNRBase.m in Sources */,
 				49F260BC12CAE8C40005B1F5 /* TabViewController.m in Sources */,
 				49F2628012CD5A210005B1F5 /* UNRControl.m in Sources */,
 				49F262A912CD8CB40005B1F5 /* UNRControlManager.m in Sources */,
 				49F262B612CD91280005B1F5 /* UNRStringControl.m in Sources */,
 				49F262B912CD912F0005B1F5 /* UNRNumberControl.m in Sources */,
 				49F263B712CE85400005B1F5 /* UNRTextControl.m in Sources */,
-				49F2648112D191760005B1F5 /* UNRGuid.m in Sources */,
 				49FE457F12D9399500E02EB7 /* PluginLoader.m in Sources */,
 				49FE458312DAC46F00E02EB7 /* UNRIntPopUpControl.m in Sources */,
-				49FE462F12DC2AB000E02EB7 /* UNRObject.m in Sources */,
-				49FE478412DD722E00E02EB7 /* UNRProperty.m in Sources */,
 				49FE485112DE8ADC00E02EB7 /* UNRListControl.m in Sources */,
 				491F2D7B12EBC5310068E0E1 /* UNRControlView.m in Sources */,
 				498B148D131CC0F10040168B /* UNRSoundControl.m in Sources */,
-				498B159A131F14320040168B /* UNRDataPluginLoader.m in Sources */,
-				494DE62113220AD300227057 /* UNRGeneration.m in Sources */,
-				494DE676132218EA00227057 /* UNRUtilities.m in Sources */,
 				498582B6132AF77100143F5A /* DocModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4908A2CD13623F83006284C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4962503F135409D500768E43 /* UnrealToolsFramework */;
+			targetProxy = 4908A2CC13623F83006284C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
@@ -404,11 +730,212 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		49624FA21352AC7D00768E43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnrealTools;
+			};
+			name = Debug;
+		};
+		49624FA31352AC7D00768E43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnrealTools;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		49624FE61352B2F200768E43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UNRDataExporter;
+			};
+			name = Debug;
+		};
+		49624FE71352B2F200768E43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UNRDataExporter;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		49625045135409D600768E43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "UnrealToolsFramework-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnrealToolsFramework;
+			};
+			name = Debug;
+		};
+		49625046135409D600768E43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "UnrealToolsFramework-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnrealToolsFramework;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		4962504F135409E100768E43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "UNRDataExporterFramework-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UNRDataExporterFramework;
+			};
+			name = Debug;
+		};
+		49625050135409E100768E43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "UNRDataExporterFramework-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UNRDataExporterFramework;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C05733C808A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -426,6 +953,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = UnrealPackageExporter_Prefix.pch;
@@ -465,6 +993,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		49624FC11352ACC200768E43 /* Build configuration list for PBXNativeTarget "UnrealTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49624FA21352AC7D00768E43 /* Debug */,
+				49624FA31352AC7D00768E43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49624FEC1352B32400768E43 /* Build configuration list for PBXNativeTarget "UNRDataExporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49624FE61352B2F200768E43 /* Debug */,
+				49624FE71352B2F200768E43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49625047135409D600768E43 /* Build configuration list for PBXNativeTarget "UnrealToolsFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49625045135409D600768E43 /* Debug */,
+				49625046135409D600768E43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49625054135409E100768E43 /* Build configuration list for PBXNativeTarget "UNRDataExporterFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4962504F135409E100768E43 /* Debug */,
+				49625050135409E100768E43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "UnrealPackageExporter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

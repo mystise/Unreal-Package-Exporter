@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Unreal.h"
-#import "DataManager.h"
+#import <UnrealToolsFramework/Unreal.h>
+#import <UnrealToolsFramework/DataManager.h>
 #import "OutlineViewController.h"
 
 @interface DocModel : NSObject {
@@ -19,7 +19,11 @@
 - (void)loadData:(NSData *)data;
 
 - (void)createStuff;
-- (void)exportObject:(id)sender;
+
+- (void)exportRaw:(id)sender;
+- (void)exportData:(id)sender;
+
+- (void)cleanUp;
 
 @property(retain) UNRFile *file;
 @property(retain) NSMutableArray *sObj, *sRef;

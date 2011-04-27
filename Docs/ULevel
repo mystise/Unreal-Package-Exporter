@@ -1,0 +1,16 @@
+ULevel:
+actor array
+reach spec array
+model reference
+text buffer array
+double timeSeconds
+TMap travelInfo
+
+FReachSpec:
+int distance
+actor start
+actor end
+int collRadius
+int collHeight
+int reachFlags
+byte bPruned

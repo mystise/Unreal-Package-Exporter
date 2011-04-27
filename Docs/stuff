@@ -1,0 +1,80 @@
+//int is signed
+//int is usually compactIndex
+//dword is unsigned
+
+//short is signed
+//ushort is unsigned
+
+known:
+
+vector array
+point array
+
+vert array{
+	compactIndex pVertex	//index of point
+	compactIndex iSide	//index of unique side
+}
+
+lightMap array{
+	int dataOffset
+	vector pan
+	compactIndex uclamp, vclamp
+	float uscale, vscale
+	int iLightActors
+}
+
+lightBits data
+bounding box array
+
+int leafHulls array
+
+leaf array{
+	compactIndex iZone, iPermeating, iVolumetric
+	long iVisibleZones
+}
+
+int numZones
+zone properties array{
+	zone reference
+	long connectivity
+	long visibility
+}
+
+guessing:
+
+poly reference
+
+node array{
+	plane plane
+	long zoneMask
+	int iVertPool	//index to first vertex in vert array
+	int iSurf		//index to bspSurf for this node
+	int iBack		//index to node in back
+	int iFront		//index to node in front
+	int iPlane		//index to coplaner node
+	int iCollBound	//index to coll bound
+	int iRenderBound//index to render bound
+	byte iZone[2]
+	byte numVerts
+	byte nodeFlags
+	int iLeaf[2]
+}
+
+surfs array{
+	texture reference
+	dword polyFlags
+	int pBase
+	int vNormal //index to poly normal in the vector array
+	int vTextureU //index to u-vector
+	int vTextureV //index to v-vector
+	int iLightMap //index to light mesh
+	int iBrushPoly //poly index
+	short panU
+	short panV
+	actor reference
+}
+
+ubool rootOutside
+ubool linked
+int moverLink
+int numSharedSides

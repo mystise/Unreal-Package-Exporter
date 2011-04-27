@@ -65,9 +65,12 @@
 }
 
 - (void)loadPlugin:(UNRExport *)object file:(UNRFile *)file{
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	self.addData = NO;
 	
-	self.obj = [[UNRObject alloc] initWithFile:file object:object];
+	id obj = [[UNRObject alloc] initWithFile:file object:object];
+	self.obj = obj;
+	[obj release];
 	
 	NSString *className = object.classObj.name.string;
 	if(className == nil){
@@ -93,8 +96,8 @@
 	}
 	
 	object.objectData = [self.obj.currentData objectAtIndex:0];
-	[self.obj release];
 	self.obj = nil;
+	[pool drain];
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)eName namespaceURI:(NSString *)nURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)aDict{

@@ -34,6 +34,7 @@
 
 - (id)initWithFileData:(NSData *)fileData pluginsDirectory:(NSString *)path{
 	if(self = [super init]){
+		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 		id loader = [[UNRDataPluginLoader alloc] initWithDirectory:path];
 		self.pluginLoader = loader;
 		[loader release];
@@ -120,12 +121,13 @@
 			[obj resolveRefrences:self];
 		}
 		
-		for(UNRExport *obj in self.objects){
+		/*for(UNRExport *obj in self.objects){
 			[obj loadPlugin:self];
-		}
+		}*/
 		
 		[manager release];
-		self.pluginLoader = nil;
+		//self.pluginLoader = nil;
+		[pool drain];
 	}
 	return self;
 }

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Unreal.h"
+#import <UnrealToolsFramework/Unreal.h>
 #import "UNRControlManager.h"
 #import "PluginLoader.h"
 

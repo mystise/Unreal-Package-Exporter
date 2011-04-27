@@ -30,6 +30,7 @@
 			int fileOffset = [UNRFile readCompactIndex:manager];
 			export.data = [manager.fileData subdataWithRange:NSMakeRange(fileOffset, fileSize)];
 		}
+		export.objectData = nil;
 	}
 	return export;
 }
@@ -45,7 +46,7 @@
 }
 
 - (void)loadPlugin:(UNRFile *)file{
-	if(self.data){
+	if(self.data && !self.objectData){
 		[file.pluginLoader loadPlugin:self file:file];
 	}
 }

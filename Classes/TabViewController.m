@@ -102,6 +102,7 @@
 	
 	[self.tabView addTabViewItem:rawData];
 	
+	//Data View
 	NSScrollView *dataScroll = [[[NSScrollView alloc] initWithFrame:[self.tabView contentRect]] autorelease];
 	[dataScroll setDrawsBackground:NO];
 	[dataScroll setHasVerticalScroller:YES];
@@ -115,6 +116,7 @@
 	[self.managers setValue:manager forKey:@"Data"];
 	[manager release];
 	
+	[obj loadPlugin:self.file];
 	[self.loader loadPlugin:obj controlManager:manager];
 	
 	[self.tabView addTabViewItem:data];

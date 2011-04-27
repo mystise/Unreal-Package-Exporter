@@ -2,7 +2,8 @@
 	<info>
 		<byte name="textureCount"/>
 		<array name="textures" count="textureCount">
-			<objectReference name="textureRef"/>
+		<!-- deal with file.ver == 61 -->
+			<compactIndex name="textureRef"/> <!-- objectReference -->
 			<compactIndex name="charCount"/>
 			<array name="characters" count="charCount">
 				<int name="x"/>
@@ -14,7 +15,7 @@
 	</info>
 	<controls>
 		<intPopUpControl label="Font:" from="0" to="textureCount" bind="textures"/>
-		<stringControl label="Texture:" input="textures.textureRef.name.string" editable="no"/>
+		<!-- <stringControl label="Texture:" input="textures.textureRef.name.string" editable="no"/> -->
 		<intPopUpControl label="Character:" from="0" to="textures.charCount" bind="textures.characters"/>
 		<numberControl label="Char X:" input="textures.characters.x" editable="no"/>
 		<numberControl label="Char Y:" input="textures.characters.y" editable="no"/>
