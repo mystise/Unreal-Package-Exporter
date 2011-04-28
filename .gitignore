@@ -6,3 +6,5 @@ build/
 
 *.xcodeproj/*.mode*
 *.xcodeproj/*.pbxuser
+*.xcodeproj/xcuserdata/
+*.xcodeproj/*.xcworkspace/
