@@ -19,21 +19,27 @@
 	if((self = [super init])){
 		self.classTrace = [NSMutableArray array];
 		self.plugins = [NSMutableDictionary dictionary];
+		
+		/*NSString *path = [[NSBundle mainBundle] resourcePath];
+		NSBundle *bundle = [[NSBundle alloc] initWithPath:path];
+		NSArray *xmlFiles = [bundle URLsForResourcesWithExtension:@"xml" subdirectory:@"Default Plugins"];*/
 		NSFileManager *manager = [[[NSFileManager alloc] init] autorelease];
 		NSBundle *bundle = [NSBundle mainBundle];
 		NSString *path = [[bundle resourcePath] stringByAppendingPathComponent:@"Default Plugins"];
 		NSDirectoryEnumerator *enumerator = [manager enumeratorAtPath:path];
 		NSString *filePath;
 		while((filePath = [enumerator nextObject])){
-			if([[filePath pathExtension] isEqualToString:@"xml"]){
+		//for(NSURL *url in xmlFiles){
+			//self.url = url;
+			if([[[filePath pathExtension] lowercaseString] isEqualToString:@"xml"]){
 				self.url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
-				//NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathComponent:filePath]];
 				NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:self.url];
 				parser.delegate = self;
 				[parser parse];
 				[parser release];
 			}
 		}
+		[bundle release];
 		self.addControls = NO;
 		self.controlTypes = [NSDictionary dictionaryWithObjectsAndKeys:
 							 @"addTextControlWithAttributes:", @"textcontrol",

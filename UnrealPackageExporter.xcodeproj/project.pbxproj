@@ -69,7 +69,6 @@
 		4962510013540A5800768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
 		498582B6132AF77100143F5A /* DocModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 498582B5132AF77100143F5A /* DocModel.m */; };
 		498B148D131CC0F10040168B /* UNRSoundControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B148C131CC0F10040168B /* UNRSoundControl.m */; };
-		4995D24011FFE5FA00E19E44 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D23F11FFE5FA00E19E44 /* DataManager.m */; };
 		4995D59A12023D3500E19E44 /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D59912023D3500E19E44 /* OutlineViewController.m */; };
 		49EDD8A41367C81800D27252 /* UnrealPackageExporter.icns in Resources */ = {isa = PBXBuildFile; fileRef = 49EDD8A31367C81800D27252 /* UnrealPackageExporter.icns */; };
 		49F260BC12CAE8C40005B1F5 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F260BB12CAE8C40005B1F5 /* TabViewController.m */; };
@@ -667,7 +666,6 @@
 			files = (
 				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
-				4995D24011FFE5FA00E19E44 /* DataManager.m in Sources */,
 				4995D59A12023D3500E19E44 /* OutlineViewController.m in Sources */,
 				49F260BC12CAE8C40005B1F5 /* TabViewController.m in Sources */,
 				49F2628012CD5A210005B1F5 /* UNRControl.m in Sources */,

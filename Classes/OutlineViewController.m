@@ -13,7 +13,19 @@
 
 @implementation OutlineViewController
 
-@synthesize control = control_, selected = selected_, window = window_, doc = doc_;
+@synthesize control = control_, selected = selected_, window = window_, doc = doc_, plugins = plugins_;
+
+- (void)awakeFromNib{
+	//initialize an NSBundle for each plugin
+	self.plugins = [NSMutableArray array];
+	NSBundle *bundle = [[NSBundle alloc] initWithPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Default Plugins"]];
+	NSArray *plugins = [bundle URLsForResourcesWithExtension:@"bundle" subdirectory:nil];
+	for(NSURL *url in plugins){
+		NSBundle *plugin = [NSBundle bundleWithURL:url];
+		[self.plugins addObject:plugin];
+	}
+	NSLog(@"Found %lu bundles.", [self.plugins count]);
+}
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item{
 	if([item isKindOfClass:[NSMutableArray class]]){
@@ -135,6 +147,20 @@
 		[save setExtensionHidden:NO];
 		[save beginSheetModalForWindow:self.window completionHandler:^ (NSInteger result){
 			if(result == NSOKButton){
+				for(NSBundle *plugin in self.plugins){
+					NSError *error = nil;
+					if(![plugin loadAndReturnError:&error]) {
+						NSLog(@"error = %@ userInfo = %@", error, [error userInfo]);
+					}
+					Class class = [plugin principalClass];
+					NSObject<UNRDataExportPlugin> *pluginObj = [[class alloc] init];
+					if([pluginObj canExportDataWithClassTrace:self.control.loader.classTrace]){
+						NSLog(@"Found plugin!");
+						[pluginObj exportData:self.selected withFile:self.control.file andPath:[[save URL] path]];
+					}
+					[pluginObj release];
+					[plugin unload];
+				}
 				//loop through each plugin and ask it if it works
 				//self.control.loader.classTrace
 				//when you find one, call the method
@@ -152,6 +178,8 @@
 	//control_ = nil;
 	[selected_ release];
 	selected_ = nil;
+	[plugins_ release];
+	plugins_ = nil;
 	//[window_ release];
 	//window_ = nil;
 	//[doc_ release];

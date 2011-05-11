@@ -134,7 +134,11 @@
 
 - (id)resolveObjectReference:(int)ref{
 	if(ref > 0){
-		return [self.objects objectAtIndex:ref-1];
+		UNRExport *retVal = [self.objects objectAtIndex:ref-1];
+		if(retVal.objectData == nil){
+			[retVal loadPlugin:self];
+		}
+		return retVal;
 	}else if(ref < 0){
 		return [self.references objectAtIndex:-ref-1];
 	}

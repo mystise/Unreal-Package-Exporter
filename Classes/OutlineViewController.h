@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import <UnrealToolsFramework/Unreal.h>
+#import "UNRDataExportPlugin.h"
 @class DocModel, TabViewController;
 
 @interface OutlineViewController : NSObject<NSOutlineViewDataSource, NSOutlineViewDelegate, NSWindowDelegate> {
@@ -24,5 +25,6 @@
 @property(assign) IBOutlet TabViewController *control;
 @property(assign) IBOutlet NSWindow *window;
 @property(assign) IBOutlet DocModel *doc;
+@property(retain) NSMutableArray *plugins;
 
 @end
