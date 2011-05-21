@@ -8,7 +8,6 @@
 
 #import "UNRDataPluginLoader.h"
 
-#import "UNRControlManager.h"
 #import "UNRObject.h"
 
 @implementation UNRDataPluginLoader
