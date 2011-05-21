@@ -136,18 +136,12 @@
 	if(self.selected != nil){
 		NSSavePanel *save = [[NSSavePanel alloc]init];
 		[save setCanCreateDirectories:YES];
-		UNRBase *obj = self.selected.classObj;
-		NSString *fileExtension;
-		if(obj != nil){
-			fileExtension = obj.name.string;
-		}else{
-			fileExtension = @"unrData";
-		}
-		[save setAllowedFileTypes:[NSArray arrayWithObject:fileExtension]];
+		//[save setAllowedFileTypes:[NSArray arrayWithObject:fileExtension]];
 		[save setExtensionHidden:NO];
 		[save beginSheetModalForWindow:self.window completionHandler:^ (NSInteger result){
 			if(result == NSOKButton){
 				for(NSBundle *plugin in self.plugins){
+					BOOL done = NO;
 					NSError *error = nil;
 					if(![plugin loadAndReturnError:&error]) {
 						NSLog(@"error = %@ userInfo = %@", error, [error userInfo]);
@@ -157,9 +151,13 @@
 					if([pluginObj canExportDataWithClassTrace:self.control.loader.classTrace]){
 						NSLog(@"Found plugin!");
 						[pluginObj exportData:self.selected withFile:self.control.file andPath:[[save URL] path]];
+						done = YES;
 					}
 					[pluginObj release];
 					[plugin unload];
+					if(done == YES){
+						return;
+					}
 				}
 				//loop through each plugin and ask it if it works
 				//self.control.loader.classTrace

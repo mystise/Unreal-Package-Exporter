@@ -128,10 +128,10 @@
 		498582B5132AF77100143F5A /* DocModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocModel.m; sourceTree = "<group>"; };
 		498B148B131CC0F10040168B /* UNRSoundControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRSoundControl.h; sourceTree = "<group>"; };
 		498B148C131CC0F10040168B /* UNRSoundControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRSoundControl.m; sourceTree = "<group>"; };
-		498B1598131F14320040168B /* UNRDataPluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNRDataPluginLoader.h; path = Classes/UNRDataPluginLoader.h; sourceTree = SOURCE_ROOT; };
-		498B1599131F14320040168B /* UNRDataPluginLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UNRDataPluginLoader.m; path = Classes/UNRDataPluginLoader.m; sourceTree = SOURCE_ROOT; };
-		4995D23E11FFE5FA00E19E44 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = ../DataManager.h; sourceTree = "<group>"; };
-		4995D23F11FFE5FA00E19E44 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = ../DataManager.m; sourceTree = "<group>"; };
+		498B1598131F14320040168B /* UNRDataPluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNRDataPluginLoader.h; path = Classes/UnrealPackage/UNRPluginObject/UNRDataPluginLoader.h; sourceTree = SOURCE_ROOT; };
+		498B1599131F14320040168B /* UNRDataPluginLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UNRDataPluginLoader.m; path = Classes/UnrealPackage/UNRPluginObject/UNRDataPluginLoader.m; sourceTree = SOURCE_ROOT; };
+		4995D23E11FFE5FA00E19E44 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		4995D23F11FFE5FA00E19E44 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		4995D3F012011FFA00E19E44 /* UNRFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRFile.h; sourceTree = "<group>"; };
 		4995D3F112011FFA00E19E44 /* UNRFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRFile.m; sourceTree = "<group>"; };
 		4995D463120142C100E19E44 /* UNRName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRName.h; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		4995D4AB1201467D00E19E44 /* Unreal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unreal.h; sourceTree = "<group>"; };
 		4995D59812023D3500E19E44 /* OutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewController.h; sourceTree = "<group>"; };
 		4995D59912023D3500E19E44 /* OutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewController.m; sourceTree = "<group>"; };
-		49A62559134162DB00C28F4F /* UNRDataExportPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UNRDataExportPlugin.h; path = Classes/UNRDataExportPlugin.h; sourceTree = "<group>"; };
+		49A62559134162DB00C28F4F /* UNRDataExportPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRDataExportPlugin.h; sourceTree = "<group>"; };
 		49EDD8A31367C81800D27252 /* UnrealPackageExporter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = UnrealPackageExporter.icns; sourceTree = "<group>"; };
 		49F260BA12CAE8C40005B1F5 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
 		49F260BB12CAE8C40005B1F5 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 				49FE457E12D9399500E02EB7 /* PluginLoader.m */,
 			);
 			name = UNRPackageExporter;
-			path = Classes;
+			path = Classes/UNRPackageExporter;
 			sourceTree = "<group>";
 		};
 		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
@@ -357,6 +357,7 @@
 				49A62559134162DB00C28F4F /* UNRDataExportPlugin.h */,
 			);
 			name = UNRDataExporter;
+			path = Classes/UNRDataExporter;
 			sourceTree = "<group>";
 		};
 		49F262B112CD8FD00005B1F5 /* UNRControl */ = {
@@ -395,7 +396,7 @@
 				49FE478212DD722E00E02EB7 /* UNRProperty.h */,
 				49FE478312DD722E00E02EB7 /* UNRProperty.m */,
 			);
-			name = UNRPluginObject;
+			path = UNRPluginObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
