@@ -67,6 +67,10 @@
 		496250FD13540A4700768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
 		496250FE13540A4C00768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
 		4962510013540A5800768E43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */; };
+		49836DF913887FCE003193CD /* UNRDataPluginReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 49836DF713887FCE003193CD /* UNRDataPluginReader.h */; };
+		49836DFA13887FCE003193CD /* UNRDataPluginReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 49836DF713887FCE003193CD /* UNRDataPluginReader.h */; };
+		49836DFB13887FCE003193CD /* UNRDataPluginReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49836DF813887FCE003193CD /* UNRDataPluginReader.m */; };
+		49836DFC13887FCE003193CD /* UNRDataPluginReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49836DF813887FCE003193CD /* UNRDataPluginReader.m */; };
 		498582B6132AF77100143F5A /* DocModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 498582B5132AF77100143F5A /* DocModel.m */; };
 		498B148D131CC0F10040168B /* UNRSoundControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B148C131CC0F10040168B /* UNRSoundControl.m */; };
 		4995D59A12023D3500E19E44 /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4995D59912023D3500E19E44 /* OutlineViewController.m */; };
@@ -124,6 +128,8 @@
 		4962504E135409E100768E43 /* UNRDataExporterFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UNRDataExporterFramework-Info.plist"; sourceTree = "<group>"; };
 		4980D76412079ED3009CE250 /* UNRBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRBase.h; sourceTree = "<group>"; };
 		4980D76512079ED3009CE250 /* UNRBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRBase.m; sourceTree = "<group>"; };
+		49836DF713887FCE003193CD /* UNRDataPluginReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRDataPluginReader.h; sourceTree = "<group>"; };
+		49836DF813887FCE003193CD /* UNRDataPluginReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRDataPluginReader.m; sourceTree = "<group>"; };
 		498582B4132AF77100143F5A /* DocModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocModel.h; sourceTree = "<group>"; };
 		498582B5132AF77100143F5A /* DocModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocModel.m; sourceTree = "<group>"; };
 		498B148B131CC0F10040168B /* UNRSoundControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRSoundControl.h; sourceTree = "<group>"; };
@@ -391,6 +397,8 @@
 			children = (
 				498B1598131F14320040168B /* UNRDataPluginLoader.h */,
 				498B1599131F14320040168B /* UNRDataPluginLoader.m */,
+				49836DF713887FCE003193CD /* UNRDataPluginReader.h */,
+				49836DF813887FCE003193CD /* UNRDataPluginReader.m */,
 				49FE462D12DC2AB000E02EB7 /* UNRObject.h */,
 				49FE462E12DC2AB000E02EB7 /* UNRObject.m */,
 				49FE478212DD722E00E02EB7 /* UNRProperty.h */,
@@ -419,6 +427,7 @@
 				49624FAE1352AC9200768E43 /* UNRUtilities.h in Headers */,
 				49624FAF1352AC9200768E43 /* Unreal.h in Headers */,
 				49624FB01352AC9200768E43 /* DataManager.h in Headers */,
+				49836DF913887FCE003193CD /* UNRDataPluginReader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +456,7 @@
 				4962505F135409EC00768E43 /* UNRUtilities.h in Headers */,
 				49625060135409EC00768E43 /* Unreal.h in Headers */,
 				49625061135409EC00768E43 /* DataManager.h in Headers */,
+				49836DFA13887FCE003193CD /* UNRDataPluginReader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +635,7 @@
 				49624FBA1352ACB300768E43 /* UNRGeneration.m in Sources */,
 				49624FBB1352ACB300768E43 /* UNRUtilities.m in Sources */,
 				49624FBC1352ACB300768E43 /* DataManager.m in Sources */,
+				49836DFB13887FCE003193CD /* UNRDataPluginReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +662,7 @@
 				4962506B135409F500768E43 /* UNRGeneration.m in Sources */,
 				4962506C135409F500768E43 /* UNRUtilities.m in Sources */,
 				4962506D135409F500768E43 /* DataManager.m in Sources */,
+				49836DFC13887FCE003193CD /* UNRDataPluginReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
