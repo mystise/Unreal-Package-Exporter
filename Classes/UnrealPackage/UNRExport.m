@@ -14,7 +14,7 @@
 
 @implementation UNRExport
 
-@synthesize classObj = classObj_, superObj = superObj_, flags = flags_, data = data_, objectData = objectData_, classObjRef = classObjRef_, superObjRef = superObjRef_;
+@synthesize classObj = classObj_, superObj = superObj_, flags = flags_, data = data_, objectData = objectData_, classObjRef = classObjRef_, superObjRef = superObjRef_, loading = loading_;
 
 + (id)exportWithManager:(DataManager *)manager{
 	UNRExport *export = [[[self alloc] init] autorelease];
@@ -31,6 +31,7 @@
 			export.data = [manager.fileData subdataWithRange:NSMakeRange(fileOffset, fileSize)];
 		}
 		export.objectData = nil;
+		export.loading = YES;
 	}
 	return export;
 }
@@ -43,11 +44,14 @@
 	[super resolveRefrences:file];
 	self.classObj = [file resolveObjectReference:self.classObjRef];
 	self.superObj = [file resolveObjectReference:self.superObjRef];
+	self.loading = NO;
 }
 
 - (void)loadPlugin:(UNRFile *)file{
 	if(self.data && !self.objectData){
+		self.loading = YES;
 		[file.pluginLoader loadPlugin:self file:file];
+		self.loading = NO;
 	}
 }
 

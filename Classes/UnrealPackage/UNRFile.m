@@ -123,12 +123,7 @@
 			[obj resolveRefrences:self];
 		}
 		
-		/*for(UNRExport *obj in self.objects){
-			[obj loadPlugin:self];
-		}*/
-		
 		[manager release];
-		//self.pluginLoader = nil;
 		[pool drain];
 	}
 	return self;
@@ -137,7 +132,7 @@
 - (id)resolveObjectReference:(int)ref{
 	if(ref > 0){
 		UNRExport *retVal = [self.objects objectAtIndex:ref-1];
-		if(retVal.objectData == nil){
+		if(retVal.objectData == nil && retVal.loading != YES){
 			[retVal loadPlugin:self];
 		}
 		return retVal;
