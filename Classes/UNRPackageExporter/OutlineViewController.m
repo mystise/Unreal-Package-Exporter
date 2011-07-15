@@ -25,6 +25,7 @@
 		[self.plugins addObject:plugin];
 	}
 	NSLog(@"Found %lu bundles.", [self.plugins count]);
+	[bundle release];
 }
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item{

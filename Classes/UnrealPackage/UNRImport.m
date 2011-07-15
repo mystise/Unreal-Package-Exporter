@@ -30,8 +30,8 @@
 	return [NSString stringWithFormat:@"UNRImport: %@", self.name.string];
 }
 
-- (void)resolveRefrences:(UNRFile *)file{
-	[super resolveRefrences:file];
+- (void)resolveReferences:(UNRFile *)file{
+	[super resolveReferences:file];
 	self.classPackage = [file.names objectAtIndex:self.classPackageRef];
 	self.className = [file.names objectAtIndex:self.classNameRef];
 }

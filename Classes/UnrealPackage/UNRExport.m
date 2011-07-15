@@ -40,8 +40,8 @@
 	return [NSString stringWithFormat:@"UNRExport: %@", self.name.string];
 }
 
-- (void)resolveRefrences:(UNRFile *)file{
-	[super resolveRefrences:file];
+- (void)resolveReferences:(UNRFile *)file{
+	[super resolveReferences:file];
 	self.classObj = [file resolveObjectReference:self.classObjRef];
 	self.superObj = [file resolveObjectReference:self.superObjRef];
 	self.loading = NO;

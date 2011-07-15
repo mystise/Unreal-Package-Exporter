@@ -14,7 +14,7 @@
 	
 }
 
-- (void)resolveRefrences:(UNRFile *)file;
+- (void)resolveReferences:(UNRFile *)file;
 - (NSUInteger)subObjectsCount;
 
 @property(nonatomic, assign) UNRBase *package;//package is the one who owns the subObjects array that this is contained in

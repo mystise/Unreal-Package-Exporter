@@ -11,6 +11,9 @@
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		4908A2CE13623F88006284C4 /* UnrealToolsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49625040135409D500768E43 /* UnrealToolsFramework.framework */; };
 		491F2D7B12EBC5310068E0E1 /* UNRControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F2D7A12EBC5310068E0E1 /* UNRControlView.m */; };
+		4939C41713CF27F60049D122 /* UNRScriptParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4939C41513CF27F60049D122 /* UNRScriptParser.h */; };
+		4939C41813CF28890049D122 /* UNRScriptParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939C41413CF27F60049D122 /* UNRScriptParser.m */; };
+		4939C41913CF28950049D122 /* UNRScriptParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4939C41413CF27F60049D122 /* UNRScriptParser.m */; };
 		49624FA41352AC9200768E43 /* UNRDataPluginLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 498B1598131F14320040168B /* UNRDataPluginLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		49624FA51352AC9200768E43 /* UNRObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 49FE462D12DC2AB000E02EB7 /* UNRObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		49624FA61352AC9200768E43 /* UNRProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 49FE478212DD722E00E02EB7 /* UNRProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +119,8 @@
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		491F2D7912EBC5310068E0E1 /* UNRControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRControlView.h; sourceTree = "<group>"; };
 		491F2D7A12EBC5310068E0E1 /* UNRControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRControlView.m; sourceTree = "<group>"; };
+		4939C41413CF27F60049D122 /* UNRScriptParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRScriptParser.m; sourceTree = "<group>"; };
+		4939C41513CF27F60049D122 /* UNRScriptParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRScriptParser.h; sourceTree = "<group>"; };
 		494DE61F13220AD300227057 /* UNRGeneration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRGeneration.h; sourceTree = "<group>"; };
 		494DE62013220AD300227057 /* UNRGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNRGeneration.m; sourceTree = "<group>"; };
 		494DE66E1322186600227057 /* UNRUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNRUtilities.h; sourceTree = "<group>"; };
@@ -403,6 +408,8 @@
 				49FE462E12DC2AB000E02EB7 /* UNRObject.m */,
 				49FE478212DD722E00E02EB7 /* UNRProperty.h */,
 				49FE478312DD722E00E02EB7 /* UNRProperty.m */,
+				4939C41513CF27F60049D122 /* UNRScriptParser.h */,
+				4939C41413CF27F60049D122 /* UNRScriptParser.m */,
 			);
 			path = UNRPluginObject;
 			sourceTree = "<group>";
@@ -465,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				496250EE13540A0800768E43 /* UNRDataExportPlugin.h in Headers */,
+				4939C41713CF27F60049D122 /* UNRScriptParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +644,7 @@
 				49624FBB1352ACB300768E43 /* UNRUtilities.m in Sources */,
 				49624FBC1352ACB300768E43 /* DataManager.m in Sources */,
 				49836DFB13887FCE003193CD /* UNRDataPluginReader.m in Sources */,
+				4939C41913CF28950049D122 /* UNRScriptParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +672,7 @@
 				4962506C135409F500768E43 /* UNRUtilities.m in Sources */,
 				4962506D135409F500768E43 /* DataManager.m in Sources */,
 				49836DFC13887FCE003193CD /* UNRDataPluginReader.m in Sources */,
+				4939C41813CF28890049D122 /* UNRScriptParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

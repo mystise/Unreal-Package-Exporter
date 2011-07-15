@@ -23,7 +23,7 @@
 	return self;
 }
 
-- (void)resolveRefrences:(UNRFile *)file{
+- (void)resolveReferences:(UNRFile *)file{
 	self.package = [file resolveObjectReference:self.packageRef];
 	self.name = [file.names objectAtIndex:self.nameRef];
 }

@@ -38,6 +38,8 @@
 - (void)addSphereWithAttributes:(NSDictionary *)attrib;
 - (void)addBoxWithAttributes:(NSDictionary *)attrib;
 - (void)addRotatorWithAttributes:(NSDictionary *)attrib;
+- (void)addGuidWithAttributes:(NSDictionary *)attrib;
+- (void)addScriptWithAttributes:(NSDictionary *)attrib;
 
 - (void)beginArrayWithAttributes:(NSDictionary *)attrib;
 - (void)endArrayWithAttributes:(NSDictionary *)attrib;

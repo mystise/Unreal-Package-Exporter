@@ -7,6 +7,7 @@
 //
 
 #import "UNRObject.h"
+#import "UNRScriptParser.h"
 
 
 @implementation UNRObject
@@ -277,6 +278,29 @@
 								[NSNumber numberWithFloat:rotRoll], @"roll",
 								nil];
 		[current setValue:vector forKey:[attrib valueForKey:@"name"]];
+	}
+}
+
+- (void)addGuidWithAttributes:(NSDictionary *)attrib{
+	id current = [self.currentData lastObject];
+	[self processArray:@"addScriptWithAttributes:" attribs:attrib];
+	if(![current isKindOfClass:[NSNull class]]){
+		UNRGuid *guid = [UNRGuid guidWithManager:self.manager];
+		[current setValue:guid forKey:[attrib valueForKey:@"name"]];
+	}
+}
+
+- (void)addScriptWithAttributes:(NSDictionary *)attrib{
+	id current = [self.currentData lastObject];
+	[self processArray:@"addScriptWithAttributes:" attribs:attrib];
+	if(![current isKindOfClass:[NSNull class]]){
+		int size = 0;
+		if([current valueForKey:[attrib valueForKey:@"size"]]){
+			size = [[current valueForKey:[attrib valueForKey:@"size"]] intValue];
+		}
+		NSMutableData *scriptData = loadScript(self, size);
+		
+		[current setValue:scriptData forKey:[attrib valueForKey:@"name"]];
 	}
 }
 

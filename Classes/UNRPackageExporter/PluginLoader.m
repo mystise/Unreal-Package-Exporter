@@ -39,7 +39,6 @@
 				[parser release];
 			}
 		}
-		[bundle release];
 		self.addControls = NO;
 		self.controlTypes = [NSDictionary dictionaryWithObjectsAndKeys:
 							 @"addTextControlWithAttributes:", @"textcontrol",

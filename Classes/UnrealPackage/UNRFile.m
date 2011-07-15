@@ -116,11 +116,11 @@
 		}
 		
 		for(UNRImport *obj in self.references){
-			[obj resolveRefrences:self];
+			[obj resolveReferences:self];
 		}
 		
 		for(UNRExport *obj in self.objects){
-			[obj resolveRefrences:self];
+			[obj resolveReferences:self];
 		}
 		
 		[manager release];
